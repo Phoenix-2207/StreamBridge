@@ -1,12 +1,16 @@
+import { playlists } from "@/lib/mockData";
+import PlaylistCard from "@/components/PlaylistCard";
+
 export default function Home() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)]">
-            <h1 className="text-4xl font-bold text-white">
-                StreamBridge
-            </h1>
-            <p className="mt-3 text-muted-foreground text-sm">
-                Your music migration & streaming hub
-            </p>
-        </div>
+        <section>
+            <h2 className="text-2xl font-bold text-white mb-6">Your Playlists</h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {playlists.map((playlist) => (
+                    <PlaylistCard key={playlist.id} playlist={playlist} />
+                ))}
+            </div>
+        </section>
     );
 }

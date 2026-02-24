@@ -18,7 +18,7 @@ export default function Sidebar() {
     return (
         <aside
             className={clsx(
-                "relative flex flex-col bg-sidebar h-full transition-all duration-300 ease-in-out border-r border-white/5",
+                "flex flex-col bg-sidebar transition-all duration-300 ease-in-out border-r border-white/5",
                 collapsed ? "w-[72px]" : "w-[260px]",
                 "max-md:w-[72px]"
             )}
